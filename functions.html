@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Session 1 — Functions & Arrays (Demo)</title>
+  <link rel="stylesheet" href="functions.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Session 1 — Functions & Arrays</h1>
+    <div class="subtitle">Open DevTools Console to see logs.</div>
+
+    <!-- Demo A -->
+    <div class="card" id="demo-a">
+      <div class="card-title">Demo A — Functions</div>
+      <div class="muted">Enter your name</div>
+      <div class="row" style="margin-top:8px;">
+        <input id="nameInput" type="text" placeholder="Type your name..." />
+        <button id="greetBtn" class="btn primary">Greet</button>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="display" id="greetOutput">Hello, Guest!</div>
+      </div>
+    </div>
+
+    <!-- Demo B -->
+    <div class="card" id="demo-b">
+      <div class="card-title">Demo B — Arrays (Strings: skills)</div>
+      <div class="muted">Add and modify skills using inputs below.</div>
+
+      <div style="margin-top:12px;">
+        <span class="pill">skills (current)</span>
+        <pre class="display" id="skillsDisplay">[]</pre>
+      </div>
+
+      <div class="grid" style="margin-top:8px;">
+        <div>
+          <label class="small">Skill Value</label>
+          <input id="skillValue" type="text" placeholder="e.g. HTML" />
+        </div>
+        <div>
+          <label class="small">Index</label>
+          <input id="skillIndex" type="number" min="0" placeholder="0" />
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="row-wrap">
+          <button class="btn small" id="pushBtn">push(value)</button>
+          <button class="btn small" id="unshiftBtn">unshift(value)</button>
+          <button class="btn small" id="popBtn">pop()</button>
+          <button class="btn small" id="shiftBtn">shift()</button>
+        </div>
+
+        <div class="row-wrap" style="margin-top:8px;">
+          <button class="btn small" id="spliceInsertBtn">splice(index, 0, value)</button>
+          <button class="btn small" id="spliceReplaceBtn">splice(index, 1, value)</button>
+          <button class="btn small" id="spliceRemoveBtn">splice(index, 1)</button>
+        </div>
+
+        <div class="row-wrap" style="margin-top:8px;">
+          <button class="btn small" id="includesBtn">includes(value)</button>
+          <button class="btn small" id="indexOfBtn">indexOf(value)</button>
+          <button class="btn small" id="concatBtn">concat(['Bootstrap'])</button>
+          <button class="btn small" id="spreadBtn">[...skills,'Tailwind']</button>
+          <input id="joinSep" type="text" placeholder=", " class="small-input" />
+          <button class="btn small" id="joinBtn">join(',')</button>
+        </div>
+
+        <div style="margin-top:10px;">
+          <input id="sliceStart" type="number" placeholder="start" class="inline-input" />
+          <input id="sliceEnd" type="number" placeholder="end (optional)" class="inline-input" />
+          <button class="btn small" id="sliceBtn">slice(start,end)</button>
+        </div>
+
+        <div style="margin-top:12px;">
+          <button class="btn ghost" id="resetSkillsBtn">Reset (empty)</button>
+        </div>
+      </div>
+
+      <div class="result-box" id="skillsResult">reset to empty</div>
+    </div>
+
+    <!-- Demo C -->
+    <div class="card" id="demo-c">
+      <div class="card-title">Demo C — Arrays (Numbers: patterns & utilities)</div>
+      <div class="muted">Add numbers and try out array methods.</div>
+
+      <div class="row" style="margin-top:8px;">
+        <input id="numInput" type="number" placeholder="Enter number" />
+        <button id="addNumBtn" class="btn primary small">Add Number</button>
+      </div>
+
+      <div style="margin-top:12px;">
+        <pre class="display" id="numbersDisplay"></pre>
+      </div>
+
+      <div class="row-wrap" style="margin-top:10px;">
+        <button class="btn small success" id="mapBtn">map: n*n</button>
+        <button class="btn small" id="filterBtn">filter: even</button>
+        <button class="btn small" id="reduceBtn">reduce: sum</button>
+        <button class="btn small" id="findBtn">find: first > 100</button>
+        <button class="btn small" id="someBtn">some: > 500?</button>
+        <button class="btn small" id="everyBtn">every: < 2000?</button>
+      </div>
+
+      <div class="row-wrap" style="margin-top:8px;">
+        <button class="btn small" id="sortAscBtn">sort asc</button>
+        <button class="btn small" id="sortDescBtn">sort desc</button>
+        <button class="btn small" id="reverseBtn">reverse()</button>
+        <button class="btn small" id="maxBtn">max</button>
+        <button class="btn small" id="minBtn">min</button>
+        <button class="btn small" id="uniqueBtn">unique(Set)</button>
+        <input id="numJoinSep" type="text" placeholder=", " class="small-input" />
+        <button class="btn small" id="numJoinBtn">join(',')</button>
+        <button class="btn ghost" id="resetNumsBtn">Reset numbers</button>
+      </div>
+
+      <div class="result-box" id="numbersResult">-</div>
+    </div>
+  </div>
+
+  <script src="functions.js"></script>
+</body>
+</html>
